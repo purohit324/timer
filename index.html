@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time Management Tool</title>
+  <meta name="description" content="A professional timer, stopwatch, and clock web app with About Us and Contact sections.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">TimerTool</div>
+    <button class="navbar-toggler" id="navbar-toggler">&#9776;</button>
+    <ul class="navbar-menu" id="navbar-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#clock">Clock</a></li>
+      <li><a href="#stopwatch">Stopwatch</a></li>
+      <li><a href="#timer">Timer</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home" class="hero">
+    <h1>Time Management Tool</h1>
+    <p>One place for your clock, stopwatch, and timer needs!</p>
+    <a href="#timer" class="cta-btn">Get Started</a>
+  </header>
+
+  <main>
+    <section id="clock" class="tool-section">
+      <h2>Clock</h2>
+      <div id="clock-display" class="time-display"></div>
+      <div id="date-display" class="date-display"></div>
+    </section>
+
+    <section id="stopwatch" class="tool-section">
+      <h2>Stopwatch</h2>
+      <div id="stopwatch-display" class="time-display">00:00:00</div>
+      <div class="button-group">
+        <button id="stopwatch-start" class="btn btn-green">Start</button>
+        <button id="stopwatch-stop" class="btn btn-red" disabled>Stop</button>
+        <button id="stopwatch-reset" class="btn btn-gray">Reset</button>
+      </div>
+    </section>
+
+    <section id="timer" class="tool-section">
+      <h2>Timer</h2>
+      <div class="timer-inputs">
+        <input type="number" id="timer-hours" min="0" max="23" placeholder="HH">
+        <span>:</span>
+        <input type="number" id="timer-minutes" min="0" max="59" placeholder="MM">
+        <span>:</span>
+        <input type="number" id="timer-seconds" min="0" max="59" placeholder="SS">
+      </div>
+      <div id="timer-display" class="time-display">00:00:00</div>
+      <div class="button-group">
+        <button id="timer-start" class="btn btn-green">Start</button>
+        <button id="timer-pause" class="btn btn-yellow" disabled>Pause</button>
+        <button id="timer-reset" class="btn btn-gray">Reset</button>
+      </div>
+      <div id="timer-alert" class="timer-alert"></div>
+    </section>
+
+    <section id="about" class="about-section">
+      <h2>About Us</h2>
+      <p>
+        TimerTool is your one-stop web app for all your time-tracking needs. Whether you need a real-time clock, a precise stopwatch, or a reliable countdown timer, TimerTool is designed to be fast, functional, and user-friendly on any device.
+      </p>
+      <p>
+        Our features are built with simplicity and accuracy in mind, making them perfect for study, work, exercise, or anything else that depends on precise timing.
+      </p>
+      <ul class="features-list">
+        <li>Real-time clock display</li>
+        <li>Accurate stopwatch functionality</li>
+        <li>Precise countdown timer</li>
+        <li>Sound notifications</li>
+        <li>Mobile-friendly design</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-subject">Subject</label>
+          <input type="text" id="contact-subject" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-green">Send Message</button>
+      </form>
+      <div id="contact-success" class="contact-success" style="display:none;">
+        Thank you for contacting us. We will get back to you soon.
+      </div>
+      <div class="contact-details">
+        <p><strong>Email:</strong> info@timertool.com</p>
+        <p><strong>Phone:</strong> +1-800-TIMER-01</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div>© 2025 TimerTool. All rights reserved.</div>
+      <div>
+        <a href="#home">Home</a> | <a href="#clock">Clock</a> | <a href="#timer">Timer</a> | <a href="#about">About Us</a> | <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
